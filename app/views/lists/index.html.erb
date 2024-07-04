@@ -1,2 +1,11 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<h1>Voici toutes les listes existantes</h1>
+<p>
+<%= link_to 'Créer une nouvelle liste', new_list_path %>
+
+<ul>
+  <% @lists.each do |list| %>
+    <li>
+      <%= link_to list.name, list_path(list) %>
+    </li>
+  <% end %>
+</ul>
