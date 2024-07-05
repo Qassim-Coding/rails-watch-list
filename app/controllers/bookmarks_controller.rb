@@ -1,4 +1,4 @@
-# un commentaire avant la classe
+# un commentaire avant
 class BookmarksController < ApplicationController
   def new
     @list = List.find(params[:list_id])
@@ -26,4 +26,5 @@ class BookmarksController < ApplicationController
   def bookmark_params
     params.require(:bookmark).permit(:movie_id, :comment)
   end
+
 end

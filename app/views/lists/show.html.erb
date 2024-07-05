@@ -2,15 +2,19 @@
 
 
 <%= link_to 'Ajouter ton Bookmark', new_list_bookmark_path(@list) %>
+<%# attention au path %>
 
 <ul>
   <% @list.bookmarks.each do |bookmark| %>
     <li>
       <%= bookmark.movie.title %> - <%= bookmark.comment %>
+
       <%= link_to 'Supprimer', bookmark_path(bookmark), data: { turbo_method: :delete, confirm: 'Etes vous sûr?' } %>
+      <%# ici on supprime avec delete et on utilise la méthode turbo%>
     </li>
   <% end %>
 </ul>
+
 
 <p>
   <%= link_to 'retourner à mes listes', lists_path %>

@@ -26,4 +26,3 @@ Rails.application.routes.draw do
   resources :bookmarks, only: :destroy
   # routes pour les bookmarks !
 end
-# routes pour les bookmarks !
